@@ -1,0 +1,1 @@
+export type { Place, PlaceCategory } from './model/types';
