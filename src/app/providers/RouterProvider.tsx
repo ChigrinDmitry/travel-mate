@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Landing } from '../../pages/landing/ui';
 import { Dashboard } from '../../pages/dashboard/';
-//import { TripPlanning } from '../../pages/trip-planning/ui';
+import { TripPlanning } from '../../pages/trip-planning/ui/TripPlanning';
 
 export const RouterProvider = () => {
     return (
@@ -9,7 +9,7 @@ export const RouterProvider = () => {
             <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                {/* <Route path="/trip/:tripId" element={<TripPlanning />} /> */}
+                <Route path="/trip/:tripId" element={<TripPlanning />} />
             </Routes>
         </BrowserRouter>
     );
