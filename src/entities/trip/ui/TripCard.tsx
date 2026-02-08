@@ -1,6 +1,6 @@
 import { Card } from "../../../shared/ui";
 
-import { Calendar, MapPin, Clock } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 import type { Trip } from '../model/types';
 import { format } from 'date-fns';
