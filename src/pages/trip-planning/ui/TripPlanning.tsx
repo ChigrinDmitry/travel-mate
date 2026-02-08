@@ -64,12 +64,12 @@ export const TripPlanning = () => {
             </header>
 
             <div className="flex-1 flex overflow-hidden">
-                
+
                 <div className="w-96 bg-white border-r border-gray-200 overflow-y-auto">
                     <div className="p-4">
                         <h2 className="text-lg font-semibold mb-4">Timeline</h2>
 
-                        {currentTrip.days.map((day, index) => (
+                        {currentTrip.days.map((day) => (
                             <div key={day.id} className="mb-4 p-4 bg-gray-50 rounded-lg">
                                 <div className="font-medium text-gray-900 mb-2">
                                     Day {day.dayNumber} - {new Date(day.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
@@ -96,37 +96,6 @@ export const TripPlanning = () => {
                 </div>
 
                 <div className="flex-1 flex overflow-hidden">
-                    
-                    <div className="w-96 bg-white border-r border-gray-200 overflow-y-auto">
-                        <div className="p-4">
-                            <h2 className="text-lg font-semibold mb-4">Timeline</h2>
-
-                            {currentTrip.days.map((day, index) => (
-                                <div key={day.id} className="mb-4 p-4 bg-gray-50 rounded-lg">
-                                    <div className="font-medium text-gray-900 mb-2">
-                                        Day {day.dayNumber} - {new Date(day.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
-                                    </div>
-
-                                    {day.places.length > 0 ? (
-                                        <div className="space-y-2">
-                                            {day.places.map((place) => (
-                                                <div key={place.id} className="text-sm p-2 bg-white rounded border border-gray-200">
-                                                    {place.name}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <p className="text-sm text-gray-500 italic">No places added yet</p>
-                                    )}
-
-                                    <Button variant="ghost" size="sm" className="mt-2 w-full">
-                                        + Add Place
-                                    </Button>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
                     <div className="flex-1 bg-gray-100 relative">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center text-gray-500">
