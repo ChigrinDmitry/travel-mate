@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Landing } from '../../pages/landing/ui';
 import { Dashboard } from '../../pages/dashboard/';
-import { TripPlanning } from '../../pages/trip-planning/ui/TripPlanning';
+import { TripPlanning } from '../../pages/trip-planning/';
 
 export const RouterProvider = () => {
     return (
